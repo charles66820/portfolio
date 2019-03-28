@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="/img/tux.png" />
+
   <title>{% if title %}{{ title }}{% else %}Default page title{% endif %}</title>
+
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   {% block stylesheet %}{% endblock %}
+  <style media="screen">
+  .navbar-toggler-icon {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+  }
+  </style>
 </head>
-<body>
+<body class="d-flex h-100 w-100">
+  <div class="d-flex h-100 w-100 mx-auto flex-column">
+    <header class="navbar navbar-expand-sm p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal navbar-brand">Portfolio</h5>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  {% block content %}{% endblock %}
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto my-2 my-md-0 mr-md-3">
+          <li class="nav-item active">
+            <a class="p-2 text-dark" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="p-2 text-dark" href="E6">Épreuve E4</a>
+          </li>
+          <li class="nav-item">
+            <a class="p-2 text-dark" href="E4">Épreuve E4</a>
+          </li>
+          <li class="nav-item">
+            <a class="p-2 text-dark" href="/projects">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="p-2 text-dark" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+      </div>
+    </header>
+
+    <main class="container mb-auto">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="container mt-auto pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="/img/tux.png" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">© 2019-2019</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Projets</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">PPE</a></li>
+            <li><a class="text-muted" href="#">Stage</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>A propos</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="/contact">Contact</a></li>
+            <li><a class="text-muted" href="http://magicorp.fr">Magicorp</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

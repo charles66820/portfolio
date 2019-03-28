@@ -1,0 +1,10 @@
+.typewrite > span {
+  border-right: .08em solid #000;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
