@@ -10,14 +10,17 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  {% block stylesheet %}{% endblock %}
   <style media="screen">
   .navbar-toggler-icon {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
   }
+  body {
+    height: 100%;
+  }
   </style>
+  {% block stylesheet %}{% endblock %}
 </head>
-<body class="d-flex h-100 w-100">
+<body class="d-flex w-100">
   <div id="loading" class="bg-white h-100 w-100 position-fixed justify-content-center align-items-center" style="z-index:2000;display:-ms-flexbox;display:flex">
     <div  class="spinner-border text-info" style="width: 4rem; height: 4rem;" role="status">
       <span class="sr-only">Loading...</span>
@@ -48,7 +51,7 @@
             <a class="p-2 text-dark" href="/contact">Contact</a>
           </li>
         </ul>
-        <a class="btn btn-outline-primary" href="#">Sign up</a>
+        <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
       </div>
     </header>
 
