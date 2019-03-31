@@ -55,8 +55,8 @@ $app->get('/test', function (Request $req, Response $res) {
   ]);
 });
 
-/*
-//Error handlers
+
+/*//Error handlers
 $c = $app->getContainer();
 $c['errorHandler'] = function ($c) {
   return function (Request $req, Response $res, $e) use ($c) {
@@ -70,7 +70,7 @@ $c['errorHandler'] = function ($c) {
       'details' => json_encode($e)
     ]);
   };
-};*/
+};//*/
 
 $c['notFoundHandler'] = function ($c) {
   return function (Request $req, Response $res) use ($c) {
