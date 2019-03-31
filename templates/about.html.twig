@@ -7,8 +7,11 @@
 {% block content %}
   <div class="d-flex flex-column">
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Bonjour,</h1>
-      <p class="typewrite" class="lead">Je m'appelle charles Goedefroit, j'ai {{ (date("now").diff(date("1998-09-30"))).y }}ans. Je suis passionné par la science, l'électronique, l'informatique, l'astronomie, etc</p>
+      <h1 class="typewrite display-4 my-5" data-period="10000" data-type='["Bienvenue,", "Bonjour,"]'>Bonjour,</h1>
+      <p class="typewrite lead my-5">  <!-- <p class="typewrite lead my-5" data-period="20000" data-type="des"> -->
+        Je m'appelle charles Goedefroit, j'ai {{ (date("now").diff(date("1998-09-30"))).y }}ans. Je suis passionné par la science, l'électronique, l'informatique, l'astronomie, etc...
+        <!-- <span class="wrap"></span> -->
+      </p>
     </div>
     <h1 id="aboutMe" class="mt-4">À propos de moi</h1>
     <p>Depuis toujours je suis fasciné par le monde qui nous entoure. Je cherche à comprendre son fonctionnement.</p>
@@ -242,4 +245,8 @@
       <iframe src="https://docs.google.com/document/d/e/2PACX-1vQPRPqOzhlVaZzIbHKN0WnnjtQ_GYy9-Dhe9fsuBi7MYYH6w4euA_Uwuvr7Fx3NHUwhCMLyjtsI1irF/pub?embedded=true" style="width:832px; height:1067px; border:0;"></iframe>
     </div>
   </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="/js/txtType.js" charset="utf-8"></script>
 {% endblock %}
