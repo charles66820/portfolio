@@ -55,32 +55,33 @@ $app->get('/test', function (Request $req, Response $res) {
   ]);
 });
 
+//Error handlers
+if (getenv('APP_ENV') != 'dev') {
+  $c = $app->getContainer();
+  $c['errorHandler'] = function ($c) {
+    return function (Request $req, Response $res, $e) use ($c) {
 
-/*//Error handlers
-$c = $app->getContainer();
-$c['errorHandler'] = function ($c) {
-  return function (Request $req, Response $res, $e) use ($c) {
+      $res = $res->withStatus(StatusCode::HTTP_INTERNAL_SERVER_ERROR)->withHeader('Content-Type', 'text/html');
 
-    $res = $res->withStatus(StatusCode::HTTP_INTERNAL_SERVER_ERROR)->withHeader('Content-Type', 'text/html');
-
-    return $c['view']->render($res, 'error.html.twig', [
-      'title' => "Erreur 500",
-      'code' => 500,
-      'msg' => "une erreur c'est produite :( , veuillez réessayer us trader.",
-      'details' => json_encode($e)
-    ]);
+      return $c['view']->render($res, 'error.html.twig', [
+        'title' => "Erreur 500",
+        'code' => 500,
+        'msg' => "une erreur c'est produite :( , veuillez réessayer us trader.",
+        'details' => json_encode($e)
+      ]);
+    };
   };
-};//*/
 
-$c['notFoundHandler'] = function ($c) {
-  return function (Request $req, Response $res) use ($c) {
+  $c['notFoundHandler'] = function ($c) {
+    return function (Request $req, Response $res) use ($c) {
 
-    $res = $res->withStatus(StatusCode::HTTP_NOT_FOUND);
+      $res = $res->withStatus(StatusCode::HTTP_NOT_FOUND);
 
-    return $c['view']->render($res, 'error.html.twig', [
-      'title' => "Erreur 404",
-      'code' => 404,
-      'msg' => "Cette page n'existe pas :("
-    ]);
+      return $c['view']->render($res, 'error.html.twig', [
+        'title' => "Erreur 404",
+        'code' => 404,
+        'msg' => "Cette page n'existe pas :("
+      ]);
+    };
   };
-};
+}

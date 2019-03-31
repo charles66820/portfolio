@@ -1,4 +1,5 @@
 <?php
+use Symfony\Component\Dotenv\Dotenv;
 // DIC configuration
 
 $container = $app->getContainer();
@@ -9,12 +10,15 @@ $container['renderer'] = function ($c) {
   return new Slim\Views\PhpRenderer($settings['template_path']);
 };*/
 
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/../.env');
+
 // twig view renderer
 $container['view'] = function ($container) {
   $settings = $container->get('settings')['renderer'];
   $view = new \Slim\Views\Twig($settings['template_path'], [
     'cache' => __DIR__ . '/../tmp',
-    'auto_reload' => true //TODO: remove on prod
+    'auto_reload' => (getenv('APP_ENV') == "dev")
   ]);
 
   // Instantiate and add Slim specific extension
