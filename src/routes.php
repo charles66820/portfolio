@@ -48,10 +48,10 @@ $app->get('/project/{id}', function (Request $req, Response $res, array $args) {
   ]);
 });
 
-$app->get('/test', function (Request $req, Response $res) {
+$app->get('/veilletechnologique', function (Request $req, Response $res) {
 
-  return $this->view->render($res, 'test.html.twig', [
-    'name' => "test"
+  return $this->view->render($res, 'veilletechnologique.html.twig', [
+    'title' => "Veille technologique"
   ]);
 });
 
