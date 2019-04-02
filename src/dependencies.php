@@ -1,5 +1,12 @@
 <?php
-use Symfony\Component\Dotenv\Dotenv;
+use \Monolog\Logger;
+use \Monolog\Handler\StreamHandler;
+use \Monolog\Processor\UidProcessor;
+use \Slim\Http\Environment;
+use \Slim\Views\Twig;
+use Slim\Views\TwigExtension;
+use \Slim\Http\Uri;
+
 // DIC configuration
 
 $container = $app->getContainer();
@@ -10,21 +17,18 @@ $container['renderer'] = function ($c) {
   return new Slim\Views\PhpRenderer($settings['template_path']);
 };*/
 
-$dotenv = new Dotenv();
-$dotenv->load(__DIR__.'/../.env');
-
 // twig view renderer
 $container['view'] = function ($container) {
   $settings = $container->get('settings')['renderer'];
-  $view = new \Slim\Views\Twig($settings['template_path'], [
+  $view = new Twig($settings['template_path'], [
     'cache' => __DIR__ . '/../tmp',
     'auto_reload' => (getenv('APP_ENV') == "dev")
   ]);
 
   // Instantiate and add Slim specific extension
   $router = $container->get('router');
-  $uri = \Slim\Http\Uri::createFromEnvironment(new \Slim\Http\Environment($_SERVER));
-  $view->addExtension(new Slim\Views\TwigExtension($router, $uri));
+  $uri = Uri::createFromEnvironment(new Environment($_SERVER));
+  $view->addExtension(new TwigExtension($router, $uri));
 
   return $view;
 };
@@ -32,8 +36,8 @@ $container['view'] = function ($container) {
 // monolog
 $container['logger'] = function ($c) {
   $settings = $c->get('settings')['logger'];
-  $logger = new Monolog\Logger($settings['name']);
-  $logger->pushProcessor(new Monolog\Processor\UidProcessor());
-  $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+  $logger = new Logger($settings['name']);
+  $logger->pushProcessor(new UidProcessor());
+  $logger->pushHandler(new StreamHandler($settings['path'], $settings['level']));
   return $logger;
 };

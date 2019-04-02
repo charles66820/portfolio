@@ -6,16 +6,13 @@ use Slim\Http\StatusCode;
 
 // Routes
 $app->get('/', function (Request $req, Response $res) {
-
-  return $this->view->render($res, 'about.html.twig', [
-    "title" => "Accueil"
-  ]);
+  return $res->withRedirect('/about', 307);
 });
 
 $app->get('/about', function (Request $req, Response $res) {
 
   return $this->view->render($res, 'about.html.twig', [
-    "title" => "Accueil"
+    "title" => "Me concernant"
   ]);
 });
 

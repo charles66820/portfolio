@@ -1,4 +1,6 @@
 <?php
+use Symfony\Component\Dotenv\Dotenv;
+
 if (PHP_SAPI == 'cli-server') {
     // To help the built-in PHP dev server, check if the request was actually for
     // something which should probably be served as a static file
@@ -12,6 +14,10 @@ if (PHP_SAPI == 'cli-server') {
 require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
+
+//load .env file
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/../.env');
 
 // Instantiate the app
 $settings = require __DIR__ . '/../src/settings.php';
