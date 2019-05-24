@@ -5,6 +5,41 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Le projet {{ id }}</h1>
+  <h1 class="mb-4">{{ projet.name }}</h1>
 
+  {% if projet.imgs %}
+    <h3>Capture d'écrans du projet :</h3>
+  {% endif %}
+  <div class="card-columns mb-2">
+    {% for img in projet.imgs %}
+        <figure class="figure">
+          <img src="{{ img.src }}" class="figure-img img-fluid rounded" alt="...">
+          <!-- <figcaption class="figure-caption text-right">A caption for the above image.</figcaption> -->
+        </figure>
+    {% endfor %}
+  </div>
+
+  <h3>Description du projet :</h3>
+  <p>{{ projet.description }}</p>
+
+  <h3>Documents et liens associés :</h3>
+  {% if projet.docU %}
+    <p>Documentation utilisateur : <a href="{{ projet.docU.url }}" target="_blank">{{ projet.docU.name }}</a></p>
+  {% endif %}
+
+  {% if projet.docT %}
+    <p>Documentation technique : <a href="{{ projet.docT.url }}" target="_blank">{{ projet.docT.name }}</a></p>
+  {% endif %}
+
+  {% if projet.code %}
+    <p>Code source : <a href="{{ projet.code.url }}" target="_blank">{{ projet.code.name }}</a></p>
+  {% endif %}
+
+  {% if projet.build %}
+    <p>{{ projet.build.lbl }} : <a href="{{ projet.build.url }}" target="_blank">{{ projet.build.name }}</a></p>
+  {% endif %}
+
+  {% if projet.dossierDrive %}
+    <p>Dossier drive : <a href="{{ projet.dossierDrive.url }}" target="_blank">{{ projet.dossierDrive.name }}</a></p>
+  {% endif %}
 {% endblock %}
