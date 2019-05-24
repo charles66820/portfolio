@@ -35,6 +35,10 @@
     <p>Code source : <a href="{{ projet.code.url }}" target="_blank">{{ projet.code.name }}</a></p>
   {% endif %}
 
+  {% if projet.git %}
+    <p>Lien git : <a href="{{ projet.git.url }}" target="_blank">{{ projet.git.name }}</a></p>
+  {% endif %}
+
   {% if projet.build %}
     <p>{{ projet.build.lbl }} : <a href="{{ projet.build.url }}" target="_blank">{{ projet.build.name }}</a></p>
   {% endif %}

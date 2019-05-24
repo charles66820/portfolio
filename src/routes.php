@@ -73,6 +73,10 @@ $app->get('/project/OTako', function (Request $req, Response $res, array $args) 
         "url" => "/dl/OTactileSourceCode.zip",
         "name" => "Ô' Tako code source"
       ],
+      "git" => [
+        "url" => "https://github.com/charles66820/ppe3",
+        "name" => "Voire sur Github"
+      ],
       "build" => [
         "lbl" => "Accéder au site",
         "url" => "https://ppe3.magicorp.fr/",
@@ -114,6 +118,10 @@ $app->get('/project/OTactile', function (Request $req, Response $res, array $arg
       "code" => [
         "url" => "/dl/OTactileSourceCode.zip",
         "name" => "Ô' Tactile code source"
+      ],
+      "git" => [
+        "url" => "https://github.com/charles66820/OTactile",
+        "name" => "Voire sur Github"
       ],
       "build" => [
         "lbl" => "Lien de téléchargement de l'apk",
