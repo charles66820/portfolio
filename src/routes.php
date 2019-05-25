@@ -70,7 +70,7 @@ $app->get('/project/OTako', function (Request $req, Response $res, array $args) 
         "name" => "Documentation technique Ô' Tako"
       ],
       "code" => [
-        "url" => "/dl/OTactileSourceCode.zip",
+        "url" => "/dl/OTakoSourceCode.zip",
         "name" => "Ô' Tako code source"
       ],
       "git" => [
