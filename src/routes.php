@@ -16,20 +16,6 @@ $app->get('/about', function (Request $req, Response $res) {
   ]);
 });
 
-$app->get('/E6', function (Request $req, Response $res) {
-
-  return $this->view->render($res, 'E6.html.twig', [
-    "title" => "Épreuve E6"
-  ]);
-});
-
-$app->get('/E4', function (Request $req, Response $res) {
-
-  return $this->view->render($res, 'E4.html.twig', [
-    "title" => "Épreuve E4"
-  ]);
-});
-
 $app->get('/projects', function (Request $req, Response $res) {
 
   return $this->view->render($res, 'projects.html.twig', [
