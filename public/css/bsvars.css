@@ -1,0 +1,215 @@
+body {
+  color: var(--primary-text-color);
+  background-color: var(--app-background);
+}
+
+.bg-theme {
+  background-color: var(--app-background);
+}
+
+caption {
+  color: var(--hovered-text-color);
+}
+
+.blockquote-footer {
+  color: var(--hovered-text-color);
+}
+
+.img-thumbnail {
+  background-color: var(--app-background);
+}
+
+.figure-caption {
+  color: var(--hovered-text-color);
+}
+
+code {
+  color: #e83e8c;
+}
+
+kbd {
+  color: #fff;
+  background-color: #212529;
+}
+
+pre {
+  color: var(--primary-text-color);
+}
+
+.form-control {
+  color: var(--placeholder-text-color);
+  background-color: var(--app-background);
+  border: 1px solid var(--border-color);
+}
+
+.form-control:focus {
+  color: var(--placeholder-text-color);
+  background-color: var(--app-background);
+  border-color: #80bdff;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-control::-moz-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-control::-ms-input-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-control::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: var(--surface-400);
+}
+
+select.form-control:focus::-ms-value {
+  color: var(--placeholder-text-color);
+  background-color: var(--app-background);
+}
+
+.form-control-plaintext {
+  color: var(--primary-text-color);
+}
+
+.form-check-input:disabled ~ .form-check-label {
+  color: var(--hovered-text-color);
+}
+
+.btn-link:disabled, .btn-link.disabled {
+  color: var(--hovered-text-color);
+}
+
+.dropdown-menu {
+  color: var(--primary-text-color);
+  background-color: var(--app-background);
+}
+
+.dropdown-item {
+  color: var(--primary-text-color);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: var(--hovered-text-color);
+  background-color: var(--brand-background-primary);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: var(--hovered-text-color);
+}
+
+.dropdown-header {
+  color: var(--hovered-text-color);
+}
+
+.dropdown-item-text {
+  color: var(--primary-text-color);
+}
+
+.input-group-text {
+  color: var(--placeholder-text-color);
+  background-color: var(--surface-400);
+  border: 1px solid var(--border-color);
+}
+
+.nav-link.disabled {
+  color: var(--hovered-text-color);
+}
+
+.nav-tabs .nav-link.disabled {
+  color: var(--hovered-text-color);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--placeholder-text-color);
+  background-color: var(--app-background);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.breadcrumb {
+  background-color: var(--surface-400);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--hovered-text-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--hovered-text-color);
+}
+
+.jumbotron {
+  background-color: var(--surface-400);
+}
+
+.progress {
+  background-color: var(--surface-400);
+}
+
+.border {
+  border: 1px solid var(--surface-400) !important;
+}
+
+.border-top {
+  border-top: 1px solid var(--surface-400) !important;
+}
+
+.border-right {
+  border-right: 1px solid var(--surface-400) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--surface-400) !important;
+}
+
+.border-left {
+  border-left: 1px solid var(--surface-400) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem var(--shadow-sm) !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem var(--shadow) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem var(--shadow-lg) !important;
+}
+
+.modal-content {
+  background-color: var(--app-background);
+}
+
+.modal-backdrop {
+  background-color: #000;
+}
+
+.text-body {
+  color: var(--primary-text-color) !important;
+}
+
+.text-muted {
+  color: var(--hovered-text-color) !important;
+}

@@ -1,0 +1,25 @@
+:root {
+  --app-background: rgba(18, 18, 18, 1);
+
+  --primary-text-color: rgba(255, 255, 255, 0.88);
+  --hovered-text-color: rgba(255, 255, 255, 0.74);
+  --secondary-text-color: rgba(255, 255, 255, 0.5);
+  --placeholder-text-color: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(17, 17, 17, 0.4);
+
+  --brand-background-solid: rgba(40, 40, 40, 1);
+  --brand-background-primary: #282828fa;
+  --brand-background-secondary: #282828f2;
+
+  --guide-background: rgba(28, 28, 28, 1);
+  --dialog-background: rgba(36, 36, 36, 1);
+  --sidebar-background: rgba(28, 28, 28, 0.8);
+  --body-300: rgba(255, 255, 255, 1);
+  --surface-200: rgba(28, 28, 28, 1);
+  --surface-300: rgba(36, 36, 36, 1);
+  --surface-400: rgba(41, 41, 41, 1);
+
+  --shadow-sm: rgba(80, 80, 80, 0.075);
+  --shadow: rgba(80, 80, 80, 0.15);
+  --shadow-lg: rgba(80, 80, 80, 0.175)
+}

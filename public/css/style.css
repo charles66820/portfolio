@@ -1,5 +1,5 @@
 .typewrite > span {
-  border-right: .08em solid #000;
+  border-right: .08em solid var(--body-300);
   animation: caret 1s steps(1) infinite;
 }
 
