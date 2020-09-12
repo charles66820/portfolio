@@ -3,10 +3,10 @@
 {% block stylesheet %}{% endblock %}
 
 {% block content %}
-  <h1 class="mb-4">{{ projet.name }}</h1>
+  <h1 class="mb-4">{{ projet.title }}</h1>
 
   {% if projet.imgs %}
-    <h3>Capture d'écrans du projet :</h3>
+    <h3>{{ data.project.imageTitle }}</h3>
   {% endif %}
   <div class="card-columns mb-2">
     {% for img in projet.imgs %}
@@ -17,31 +17,32 @@
     {% endfor %}
   </div>
 
-  <h3>Description du projet :</h3>
+  <h3>{{ data.project.description }}</h3>
   <p>{{ projet.description }}</p>
 
-  <h3>Documents et liens associés :</h3>
+  <h3>{{ data.project.docsTitle }}</h3>
+
   {% if projet.docU %}
-    <p>Documentation utilisateur : <a href="{{ projet.docU.url }}" target="_blank">{{ projet.docU.name }}</a></p>
+    <p>{{ data.project.userDocTitle }}<a href="{{ projet.docU.url }}" target="_blank">{{ projet.docU.name }}</a></p>
   {% endif %}
 
   {% if projet.docT %}
-    <p>Documentation technique : <a href="{{ projet.docT.url }}" target="_blank">{{ projet.docT.name }}</a></p>
+    <p>{{ data.project.techDocTitle }}<a href="{{ projet.docT.url }}" target="_blank">{{ projet.docT.name }}</a></p>
   {% endif %}
 
   {% if projet.code %}
-    <p>Code source : <a href="{{ projet.code.url }}" target="_blank">{{ projet.code.name }}</a></p>
+    <p>{{ data.project.sourceCodeTitle }}<a href="{{ projet.code.url }}" target="_blank">{{ projet.code.name }}</a></p>
   {% endif %}
 
   {% if projet.git %}
-    <p>Lien git : <a href="{{ projet.git.url }}" target="_blank">{{ projet.git.name }}</a></p>
+    <p>{{ data.project.gitLinkTitle }}<a href="{{ projet.git.url }}" target="_blank">{{ projet.git.name }}</a></p>
   {% endif %}
 
   {% if projet.build %}
     <p>{{ projet.build.lbl }} : <a href="{{ projet.build.url }}" target="_blank">{{ projet.build.name }}</a></p>
   {% endif %}
 
-  {% if projet.dossierDrive %}
-    <p>Dossier drive : <a href="{{ projet.dossierDrive.url }}" target="_blank">{{ projet.dossierDrive.name }}</a></p>
+  {% if projet.driveFolder %}
+    <p>{{ data.project.driveFolderTitle }}<a href="{{ projet.driveFolder.url }}" target="_blank">{{ projet.driveFolder.name }}</a></p>
   {% endif %}
 {% endblock %}

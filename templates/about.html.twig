@@ -5,31 +5,21 @@
     body {
       height: initial;
     }
+    .darkBack {
+      filter: drop-shadow(0 0 0.01rem white);
+    }
   </style>
 {% endblock %}
 
 {% block content %}
   <div class="d-flex flex-column">
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="typewrite display-4 my-5" data-period="10000" data-type='["Bienvenue,", "Bonjour,"]'>Bonjour,</h1>
-      <p class="typewrite lead my-5">  <!-- <p class="typewrite lead my-5" data-period="20000" data-type="des"> -->
-        Je m'appelle charles Goedefroit, j'ai {{ (date("now").diff(date("1998-09-30"))).y }}ans. Je suis passionné par la science, l'électronique, l'informatique, l'astronomie, etc...
-        <!-- <span class="wrap"></span> -->
-      </p>
-    </div>
-    <h1 id="aboutMe" class="mt-4">À propos de moi</h1>
-    <p>Depuis toujours je suis fasciné par le monde qui nous entoure. Je cherche à comprendre son fonctionnement.</p>
-    <p>Dans cette quête de connaissance, je me suis penché très tôt sur l'électronique, en démontant mes jouets électroniques. Avec les pièces, je faisais des petits circuits et je modifier des jouées.</p>
-    <p>Dès que j’ai eu un ordinateur, je me suis très vite demandé comment il fonctionne. J’ai exploré tous les fichiers et toutes les fonctionnalités de Windows puis j’ai découvert Linux et j'ai aussi voulu savoir comment il fonctionne.</p>
-    <p>Dans toutes mes recherches, j’ai découvert la programmation et je me suis mis à apprendre le JAVA, l’HTML, le PHP puis le JavaScript en autodidacte.</p>
-    <p>Après le bac, je me suis dirigée vers le BTS SIO (Service Informatique aux Organisation) pour en savoir plus. J’ai consolidé mes connaissances en programmation objets et j’ai appris comment organiser mes projets. J’ai également appris à utiliser des outils très pratique comme MERISE ou UML. Pour finir, j’ai découvert des langage, des protocole et des logiciels lors de ces études et des période de stage.</p>
-    <p>je compte poursuivre mes études en licence</p>
+    <h1 id="aboutMe" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;">{{ data.menu.about }}</h1>
+    {{ data.about.content|raw }}
 
-    <h1 id="skills" class="mt-4">Mes compétences</h1>
-
+    <h1 id="skills" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;">{{ data.menu.skills }}</h1>
     <div class="row">
       <div class="col-md-5 mr-md-auto my-4">
-        <h4 class="col-12 text-center">Langage / technologie web côté <span style="white-space: nowrap;">serveur :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.webTechSrv|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/nodejs.svg" alt="Nodejs" title="Nodejs" height="48">
@@ -38,7 +28,7 @@
             <img class="mb-2" src="/img/icons/JavaScript.svg" alt="JavaScript" title="JavaScript" height="48">
           </div> -->
           <div class="p-2">
-            <img class="mb-2 my-4" src="/img/icons/express-js.png" alt="Express" title="Express" width="64">
+            <img class="mb-2 my-4 darkBack" src="/img/icons/express-js.png" alt="Express" title="Express" width="64">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/php.png" alt="PHP" title="PHP" height="48">
@@ -55,7 +45,7 @@
         </div>
       </div>
       <div class="col-md-5 ml-md-auto my-4">
-        <h4 class="col-12 text-center">Langage / technologie web côté <span style="white-space: nowrap;">client :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.webTechCli|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/html5.png" alt="HTML5" title="HTML5" height="48">
@@ -92,10 +82,10 @@
     </div>
     <div class="row">
       <div class="col-md-5 mr-md-auto my-4">
-        <h4 class="col-12 text-center">Gestion, modélisation & technologie de gestion de <span style="white-space: nowrap;">données :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.dbTechAndTools|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/sql.png" alt="SQL" title="SQL" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/sql.png" alt="SQL" title="SQL" height="48">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/mysql.png" alt="MySQL" title="MySQL" height="48">
@@ -104,12 +94,12 @@
             <img class="mb-2" src="/img/icons/PostgreSQL.png" alt="PostgreSQL" title="PostgreSQL" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/restful.png" alt="API Rest" title="API Rest" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/restful.png" alt="API Rest" title="API Rest" height="48">
           </div>
         </div>
       </div>
       <div class="col-md-5 ml-md-auto my-4">
-        <h4 class="col-12 text-center">Développement d'applications et <span style="white-space: nowrap;">logiciels :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.appAnSoftDev|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/java.png" alt="java" title="java" height="48">
@@ -133,14 +123,14 @@
             <img class="mb-2" src="/img/icons/dotnet.png" alt="dotNet" title="dotNet" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/wpforms.svg" alt="Wpf" title="Wpf" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/wpforms.svg" alt="Wpf" title="Wpf" height="48">
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12 my-4">
-        <h4 class="col-12 text-center">Environnements de <span style="white-space: nowrap;">développement :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.devEnv|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/vscode.png" alt="VisualStudio Code" title="VisualStudio Code" height="48">
@@ -179,10 +169,10 @@
             <img class="mb-2" src="/img/icons/GSuite.png" alt="GSuite" title="GSuite" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/LaTeX.png" alt="LaTeX" title="LaTeX" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/LaTeX.png" alt="LaTeX" title="LaTeX" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/github.png" alt="Github" title="Github" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/github.png" alt="Github" title="Github" height="48">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/Gitlab.png" alt="Gitlab" title="Gitlab" height="48">
@@ -213,10 +203,10 @@
     </div>
     <div class="row">
       <div class="col-lg-4 my-4">
-        <h4 class="col-12 text-center">Systèmes <span style="white-space: nowrap;">d'exploitation :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.os|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/tux.png" alt="Linux" title="Linux" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/tux.png" alt="Linux" title="Linux" height="48">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/Windows.png" alt="Windows" title="Windows" height="48">
@@ -230,7 +220,7 @@
         </div>
       </div>
       <div class="col-lg-4 mx-md-auto my-4">
-        <h4 class="col-12 text-center">Administration systèmes et <span style="white-space: nowrap;">réseau :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.network|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/SSH.png" alt="SSH" title="SSH" height="48">
@@ -242,7 +232,7 @@
             <img class="mb-2" src="/img/icons/ciscoPacketTracer.png" alt="Réseau (ipv4, ipv6, DNS)" title="Cisco Packet Tracer" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/apache.png" alt="Apache" title="Apache" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/apache.png" alt="Apache" title="Apache" height="48">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/ubuntu.png" alt="Debian / Ubuntu" title="Debian / Ubuntu" height="48">
@@ -250,7 +240,7 @@
         </div>
       </div>
       <div class="col-lg-4 my-4">
-        <h4 class="col-12 text-center"><span style="white-space: nowrap;">Autre :</span></h4>
+        <h4 class="col-12 text-center">{{ data.skills.other|raw }}</h4>
         <div class="d-flex justify-content-center flex-wrap">
           <div class="p-2">
             <img class="mb-2" src="/img/icons/SEO.png" alt="SEO" title="SEO" height="48">
@@ -259,7 +249,7 @@
             <img class="mb-2" src="/img/icons/formatfile.png" alt="JSON / XML / CSV" title="JSON / XML / CSV" height="48">
           </div>
           <div class="p-2">
-            <img class="mb-2" src="/img/icons/bash.png" alt="bash" title="bash" height="48">
+            <img class="mb-2 darkBack" src="/img/icons/bash.png" alt="bash" title="bash" height="48">
           </div>
           <div class="p-2">
             <img class="mb-2" src="/img/icons/powershell.png" alt="powershell" title="powershell / batch" height="48">
@@ -268,8 +258,4 @@
       </div>
     </div>
   </div>
-{% endblock %}
-
-{% block javascripts %}
-  <script src="/js/txtType.js" charset="utf-8"></script>
 {% endblock %}

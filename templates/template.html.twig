@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/img/icons/tux.png" />
 
-    <title>{% if title %}{{ title }}{% else %}Default page title{% endif %}</title>
+    <title>{% if title %}{{ title }}{% else %}{{ data.titles.default }}{% endif %}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,18 +21,21 @@
     body {
       height: 100%;
     }
+    .lang:hover {
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.2);
+    }
     </style>
     {% block stylesheet %}{% endblock %}
   </head>
   <body class="d-flex w-100">
     <div id="loading" class="bg-theme h-100 w-100 position-fixed justify-content-center align-items-center" style="z-index:2000;display:-ms-flexbox;display:flex">
       <div  class="spinner-border text-info" style="width: 4rem; height: 4rem;" role="status">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only">{{ data.loadingMsg }}</span>
       </div>
     </div>
     <div class="d-flex h-100 w-100 mx-auto flex-column">
       <header class="navbar navbar-expand-sm p-3 px-md-4 mb-3 bg-theme border-bottom shadow-sm position-sticky fixed-top">
-        <h5 class="my-0 mr-md-auto font-weight-normal navbar-brand">Portfolio</h5>
+        <h5 class="my-0 mr-md-auto font-weight-normal navbar-brand">{{ data.title }}</h5>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,13 +43,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto my-2 my-md-0 mr-md-3">
             <li class="nav-item active">
-              <a class="p-2 text-body" href="/">Accueil</a>
+              <a class="p-2 text-body" href="/">{{ data.menu.home }}</a>
             </li>
             <li class="nav-item">
-              <a class="p-2 text-body" href="/projects">Projets</a>
+              <a class="p-2 text-body" href="/about#skills">{{ data.menu.about }}</a>
             </li>
             <li class="nav-item">
-              <a class="p-2 text-body" href="/contact">Contact</a>
+              <a class="p-2 text-body" href="/projects">{{ data.menu.projects }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="p-2 text-body" href="/contact">{{ data.menu.contact }}</a>
+            </li>
+            <li class="nav-item">
+              <img class="mx-1 text-body lang" src="/img/icons/en.png" alt="En" title="En" height="24" onClick="setLang('en')">
+            </li>
+            <li class="nav-item">
+              <img class="mx-1 text-body lang" src="/img/icons/fr.png" alt="Fr" title="Fr" height="24" onClick="setLang('fr')">
             </li>
           </ul>
           <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
@@ -61,32 +73,32 @@
         <div class="row">
           <div class="col-12 col-md">
             <img class="mb-2" src="/img/icons/tux.png" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-muted">© 2019-2019</small>
+            <small class="d-block mb-3 text-muted">{{ data.copyright }}</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Présentation</h5>
+            <h5>{{ data.section.presentation }}</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="/about#aboutMe">À propos de moi</a></li>
-              <li><a class="text-muted" href="/about#skills">Mes compétences</a></li>
-              <li><a class="text-muted" href="/about#CV">CV</a></li>
+              <li><a class="text-muted" href="/about#aboutMe">{{ data.menu.about }}</a></li>
+              <li><a class="text-muted" href="/about#skills">{{ data.menu.skills }}</a></li>
+              <li><a class="text-muted" href="/about#CV">{{ data.menu.cv }}</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>Projets</h5>
+            <h5>{{ data.section.projects }}</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="/projects">Mes projets</a></li>
+              <li><a class="text-muted" href="/projects">{{ data.menu.projects }}</a></li>
               <hr>
               <li><a class="text-muted" href="/project/magicorp">Magicorp</a></li>
-              <!-- <li><a class="text-muted" href="/project/OTako">Ô' Tako</a></li>
-              <li><a class="text-muted" href="/project/OTactile">Ô' Tactile</a></li> -->
+              <!-- <li><a class="text-muted" href="/project/OTako">Ô'Tako</a></li>
+              <li><a class="text-muted" href="/project/OTactile">Ô'Tactile</a></li> -->
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>A propos</h5>
+            <h5>{{ data.section.about }}</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="/contact">Contact</a></li>
-              <li><a target="_blank" class="text-muted" href="https://github.com/charles66820"><i class="fab fa-github-square"></i> Mon github</a></li>
-              <li><a target="_blank" class="text-muted" href="https://twitter.com/charles66500"><i class="fab fa-twitter-square"></i> Mon twitter</li>
+              <li><a class="text-muted" href="/contact">{{ data.menu.contact }}</a></li>
+              <li><a target="_blank" class="text-muted" href="https://github.com/charles66820"><i class="fab fa-github-square"></i><span> </span>{{ data.my }} github</a></li>
+              <li><a target="_blank" class="text-muted" href="https://twitter.com/charles66500"><i class="fab fa-twitter-square"></i><span> </span>{{ data.my }} twitter</li>
               <li><a target="_blank" class="text-muted" href="http://www.magicorp.fr">Magicorp</a></li>
             </ul>
           </div>
@@ -103,7 +115,16 @@
         $('#loading').hide();
       }, false);
 
-      setTimeout(function(){ $('#loading').hide(); }, 1000); //max time to load
+      //setTimeout(function(){ $('#loading').hide(); }, 1000); //max time to load
+
+      function setCookie(name, value, age) {
+        document.cookie = `${name}=${value};max-age=${age}`;
+      }
+
+      function setLang(lang) {
+        setCookie('lang', lang, 31536000);
+        location.reload();
+      }
     </script>
   </body>
 </html>

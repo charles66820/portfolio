@@ -3,5 +3,5 @@
 {% block stylesheet %}{% endblock %}
 
 {% block content %}
-  <h1>Contacté moi sur l'address email <a href="mailto:contact@magicorp.fr">contact@magicorp.fr</a></h1>
+  <h1>{{ data.contact|raw }}</h1>
 {% endblock %}
