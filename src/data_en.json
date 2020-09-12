@@ -20,8 +20,9 @@
   "titles": {
     "default": "Default page title",
     "home": "Home",
-    "about": "My skills",
+    "about": "About me",
     "projects": "My Projects",
+    "project": "Project %s",
     "contact": "Contact me"
   },
   "home": {

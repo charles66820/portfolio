@@ -35,7 +35,7 @@ $app->get('/contact', function (Request $req, Response $res) {
 
 $app->get('/project/{name}', function (Request $req, Response $res, array $args) {
   $index = array_search($args["name"], array_column($req->local["data"]->projects, "name"));
-  if (!$index)
+  if ($index === false)
     return $this->view->render($res, 'error.html.twig', [
       'title' => $req->local["data"]->errors->error . "404",
       'code' => 404,
@@ -46,7 +46,7 @@ $app->get('/project/{name}', function (Request $req, Response $res, array $args)
 
   $project = $req->local["data"]->projects[$index];
   return $this->view->render($res, 'project.html.twig', [
-    "title" => "Projet " . $project->title,
+    "title" => sprintf($req->local["data"]->titles->project, $project->title),
     "projet" => $project,
     "data" => $req->local["data"]
   ]);
