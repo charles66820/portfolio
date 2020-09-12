@@ -13,9 +13,7 @@
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center my-5">
       <h1 class="display-4 my-5">{{ data.home.title }}</h1>
       <p class="lead my-5">
-        {{ data.home.descriptionSuffix }}
-        {{ (date("now").diff(date("1998-09-30"))).y }}
-        {{ data.home.descriptionPrefix}}
+        {{ data.home.description|format((date("now").diff(date("1998-09-30"))).y) }}
       </p>
       <a class="btn btn-outline-secondary" href="/about#aboutMe" aria-label="{{ data.menu.about }}">{{ data.menu.about }}</a>
     </div>
