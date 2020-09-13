@@ -9,9 +9,37 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" id="theme" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/bsvars.css">
-    <script src="/js/theme.js" charset="utf-8"></script>
+    <script>
+    function setDarkMode(b) {
+      localStorage.setItem("darkMode", b);
+      if (b) document.querySelector('#theme').href='/css/dark.css';
+      else document.querySelector('#theme').href='/css/light.css';
+    }
+
+    document.documentElement.style.display = 'none';
+    if (localStorage.getItem("darkMode") == null)
+      if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all')
+        document.head.insertAdjacentHTML(
+          'beforeend',
+          '<link rel="stylesheet" id="theme" href="/css/light.css" onload="document.documentElement.style.display = \'\'"><link rel="stylesheet" href="/css/bsvars.css">'
+        );
+      else {
+        document.head.insertAdjacentHTML(
+          'beforeend',
+          '<link rel="stylesheet" id="theme" onload="document.documentElement.style.display = \'\'"><link rel="stylesheet" href="/css/bsvars.css">'
+        );
+        if ((window.matchMedia("(prefers-color-scheme: dark)")).matches)
+          document.querySelector('#theme').href='/css/dark.css';
+        else document.querySelector('#theme').href='/css/light.css';
+      }
+    else {
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" id="theme" onload="document.documentElement.style.display = \'\'"><link rel="stylesheet" href="/css/bsvars.css">'
+      );
+      setDarkMode(localStorage.darkMode == "true");
+    }
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <style media="screen">
@@ -63,6 +91,18 @@
             <li class="nav-item">
               <img class="mx-1 text-body lang" src="/img/icons/fr.png" alt="Fr" title="Fr" height="24" onClick="setLang('fr')">
             </li>
+            <li class="nav-item">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="darkModeSwitche" onchange="((e) => setDarkMode(e.target.checked))(event)">
+                <label class="custom-control-label" for="darkModeSwitche">{{ data.darkMode }}</label>
+              </div>
+              <script>
+                document.querySelector("#darkModeSwitche").checked =
+                (localStorage.getItem("darkMode") == null)?
+                  (window.matchMedia('(prefers-color-scheme: dark)')).matches
+                  : localStorage.darkMode == "true";
+              </script>
+            </li>
           </ul>
           <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
         </div>
@@ -102,7 +142,7 @@
               <li><a class="text-muted" href="/contact">{{ data.menu.contact }}</a></li>
               <li><a target="_blank" class="text-muted" href="https://github.com/charles66820"><i class="fab fa-github-square"></i><span> </span>{{ data.my }} github</a></li>
               <li><a target="_blank" class="text-muted" href="https://twitter.com/charles66500"><i class="fab fa-twitter-square"></i><span> </span>{{ data.my }} twitter</li>
-              <li><a target="_blank" class="text-muted" href="http://www.magicorp.fr">Magicorp</a></li>
+              <li><a target="_blank" class="text-muted" href="https://www.magicorp.fr">Magicorp</a></li>
             </ul>
           </div>
         </div>

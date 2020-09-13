@@ -1,6 +1,7 @@
 {
   "my": "Mon",
 
+  "darkMode": "Mode sombre",
   "title": "Portfolio",
   "loadingMsg": "Chargement...",
   "copyright": "© 2019-2020",
