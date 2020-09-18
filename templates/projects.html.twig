@@ -56,7 +56,9 @@
             <div class="position-absolute fixed-top h-100 w-100 ohpi">
               <div class="position-absolute fixed-bottom">
                 <span style="font-size: 2em;text-shadow: 0px 0px 4px #FFF;color:initial" class="d-flex d-flex justify-content-center flex-wrap-reverse">
-                  {{ project.iconTechh|raw }}
+                  {% for iconTech in project.iconTechs %}
+                    {{ iconTech|raw }}
+                  {% endfor %}
                 </span>
               </div>
             </div>
