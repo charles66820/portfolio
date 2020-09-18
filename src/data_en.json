@@ -367,7 +367,7 @@
         }
       ],
       "goTo": {
-        "previewUrl": "https://portfolio.magicorp.fr/",
+        "previewUrl": "https://cgoedefroit.com/",
         "url": "/project/portfolio",
         "name": "See the project"
       },
@@ -377,7 +377,7 @@
       },
       "build": {
         "lbl": "Go to website",
-        "url": "https://portfolio.magicorp.fr/",
+        "url": "https://cgoedefroit.com/",
         "name": "Portfolio"
       }
     }
