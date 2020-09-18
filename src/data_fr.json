@@ -9,7 +9,7 @@
     "home": "Accueil",
     "about": "À propos de moi",
     "skills": "Mes compétences",
-    "cv": "CV",
+    "resume": "CV",
     "projects": "Mes projets",
     "contact": "Me contacter"
   },
@@ -43,7 +43,7 @@
     "network": "Administration systèmes et <span style=\"white-space: nowrap;\">réseau :</span>",
     "other": "<span style=\"white-space: nowrap;\">Autre :</span>"
   },
-  "contact": "Contactez moi à l'adresse email <a href=\"mailto:contact@magicorp.fr\">contact@magicorp.fr</a>",
+  "contact": "Contactez moi à l'adresse email <a href=\"mailto:charles@magicorp.fr\">charles@magicorp.fr</a>",
   "errors": {
     "error": "Erreur ",
     "projectNotFound": "le projet %s n'existe pas ou n'a pas encore été docummanté.",
