@@ -130,11 +130,11 @@
       "goTo": {
         "previewUrl": "https://ppe2.magicorp.fr/",
         "url": "/project/PPE2",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "git": {
         "url": "https://github.com/charles66820/ppe2",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Accéder au site",
@@ -169,7 +169,7 @@
       "goTo": {
         "previewUrl": "https://ppe3.magicorp.fr/",
         "url": "/project/OTako",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "docU": {
         "url": "/dl/DocumentationUtilisateurOTako.pdf",
@@ -185,7 +185,7 @@
       },
       "git": {
         "url": "https://github.com/charles66820/ppe3",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Accéder au site",
@@ -220,7 +220,7 @@
       "goTo": {
         "previewUrl": "/project/OTactile",
         "url": "/project/OTactile",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "docU": {
         "url": "/dl/DocumentationUtilisateurOTactile.pdf",
@@ -236,7 +236,7 @@
       },
       "git": {
         "url": "https://github.com/charles66820/OTactile",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Lien de téléchargement de l'apk",
@@ -269,11 +269,11 @@
       "goTo": {
         "previewUrl": "/project/stoko",
         "url": "/project/stoko",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "git": {
         "url": "https://github.com/charles66820/stoko",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       }
     },
     {
@@ -299,11 +299,11 @@
       "goTo": {
         "previewUrl": "https://www.magicorp.fr/",
         "url": "/project/magicorp",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "git": {
         "url": "https://github.com/Magicorp-team/magicorpPWA",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Accéder au site",
@@ -336,11 +336,11 @@
       "goTo": {
         "previewUrl": "https://batrenis.magicorp.fr/",
         "url": "/project/batrenis",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "git": {
         "url": "https://github.com/Magicorp-team/batrenisPWA",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Accéder au site",
@@ -370,11 +370,11 @@
       "goTo": {
         "previewUrl": "https://cgoedefroit.com/",
         "url": "/project/portfolio",
-        "name": "Voire le projet"
+        "name": "Voir le projet"
       },
       "git": {
         "url": "https://github.com/charles66820/portfolio",
-        "name": "Voire sur Github"
+        "name": "Voir sur Github"
       },
       "build": {
         "lbl": "Accéder au site",
