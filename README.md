@@ -1,6 +1,6 @@
 # Overview
 
-This projet is my portfolio. Is dev when the BTS SIO for the final exam.
+This projet is my portfolio.
 
 ## Install the Application
 

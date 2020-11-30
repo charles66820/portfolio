@@ -42,7 +42,16 @@
     "network": "Systems and network <span style=\"white-space: nowrap;\">administration :</span>",
     "other": "<span style=\"white-space: nowrap;\">Other :</span>"
   },
-  "contact": "Contact me on this email address <a href=\"mailto:charles@magicorp.fr\">charles@magicorp.fr</a>",
+  "contact": {
+    "title": "Contact me",
+    "name": "Your name",
+    "email": "Your email",
+    "subject": "Subject",
+    "message": "Your message",
+    "send": "Send",
+    "success": "Email send with success",
+    "failure": "Error on send email"
+  },
   "errors": {
     "error": "Error ",
     "projectNotFound": "%s project not font or not documented.",

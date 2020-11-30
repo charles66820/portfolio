@@ -1,7 +1,65 @@
 {% extends 'template.html.twig' %}
 
-{% block stylesheet %}{% endblock %}
-
 {% block content %}
-  <h1>{{ data.contact|raw }}</h1>
+<section class="mb-4">
+  <h1 class="h1-responsive font-weight-bold text-center my-4">{{ data.contact.msg }}</h1>
+  <div class="row">
+    <div class="col-md-9 mb-md-0 mb-5">
+      <form id="contact-form" name="contact-form" action="/contact/email" method="POST">
+        <div class="row my-2">
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label for="name">{{ data.contact.name }}</label>
+              <input type="text" id="name" name="name" class="form-control" aria-label="{{ data.contact.name }}" placeholder="{{ data.contact.name }}" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label for="email">{{ data.contact.email }}</label>
+              <input type="email" id="email" name="email" class="form-control" aria-label="{{ data.contact.email }}" placeholder="{{ data.contact.email }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-md-12">
+            <div class="md-form mb-0">
+              <label for="subject">{{ data.contact.subject }}</label>
+              <input type="text" id="subject" name="subject" class="form-control" aria-label="{{ data.contact.subject }}" placeholder="{{ data.contact.subject }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-md-12">
+            <div class="md-form">
+              <label for="message">{{ data.contact.message }}</label>
+              <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" aria-label="{{ data.contact.message }}" placeholder="{{ data.contact.message }}" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-md-left my-4">
+          <button class="btn btn-outline-secondary" type="submit" aria-label="{{ data.contact.send }}">{{ data.contact.send }}</button>
+        </div>
+      </form>
+      {% if status %}
+        <div class="status">
+          {% if status == "yes" %}
+            {{ data.contact.success }}
+          {% else %}
+            {{ data.contact.failure }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="col-md-3 text-center">
+      <ul class="list-unstyled mb-0">
+        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+          <p>Bordeaux, France</p>
+        </li>
+        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+          <p><a href="mailto:charles@magicorp.fr">charles@magicorp.fr</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 {% endblock %}
