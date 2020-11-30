@@ -43,7 +43,16 @@
     "network": "Administration systèmes et <span style=\"white-space: nowrap;\">réseau :</span>",
     "other": "<span style=\"white-space: nowrap;\">Autre :</span>"
   },
-  "contact": "Contactez moi à l'adresse email <a href=\"mailto:charles@magicorp.fr\">charles@magicorp.fr</a>",
+  "contact": {
+    "title": "Contactez moi",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "subject": "Sujet",
+    "message": "Votre message",
+    "send": "Envoyer",
+    "success": "Email envoyé avec succès",
+    "failure": "Erreur lors de l'envoi de l'email"
+  },
   "errors": {
     "error": "Erreur ",
     "projectNotFound": "le projet %s n'existe pas ou n'a pas encore été docummanté.",
