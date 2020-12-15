@@ -7,6 +7,7 @@ volumes:
 services:
     portfolio:
         container_name: portfolio
+        #restart: always
         image: php:7-alpine
         working_dir: /var/www
         command: "/bin/sh -c \"php composer.phar install && php -S 0.0.0.0:8080 -t public\""
