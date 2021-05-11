@@ -41,20 +41,45 @@ $app->post("/contact/email", function (Request $req, Response $res) {
 
   $status = true;
 
-  // Setup mailer
-  $transport = (new Swift_SmtpTransport(getenv("EMAIL_HOST"), getenv("EMAIL_PORT"), "tls"))
-    ->setUsername(getenv("EMAIL_USERNAME"))
-    ->setPassword(getenv("EMAIL_PASSWORD"));
-  $mailer = new Swift_Mailer($transport);
-
-  // Test if mailer work
-  if (!$mailer) $status = false;
-
   // Validation
   if ((!isset($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) ||
   (!isset($_POST["name"]) || $_POST["name"] === "") ||
   (!isset($_POST["message"]) || $_POST["message"] === "") ||
-  (!isset($_POST["subject"]) || $_POST["subject"] === "")) $status = false;
+  (!isset($_POST["subject"]) || $_POST["subject"] === "") ||
+  (!isset($_POST["g-recaptcha-response"]) || $_POST["g-recaptcha-response"] === "")) $status = false;
+
+  // reCAPTCHA check
+  if ($status) {
+    try {
+      $response = json_decode(
+        file_get_contents("https://www.google.com/recaptcha/api/siteverify", false, stream_context_create([
+          "http" => [
+            "method" => "POST",
+            "header"  => "Content-type: application/x-www-form-urlencoded",
+            "content" => http_build_query([
+              "secret" => getenv("reCAPTCHA_SECRET"),
+              "response" => $_POST["g-recaptcha-response"]
+            ])
+          ]
+        ]))
+      );
+      $status = $response->success == true;
+    } catch (\Throwable $th) {
+      // reCAPTCHA error
+      $status = false;
+    }
+  }
+
+  // Setup mailer
+  if ($status) {
+    $transport = (new Swift_SmtpTransport(getenv("EMAIL_HOST"), getenv("EMAIL_PORT"), "tls"))
+    ->setUsername(getenv("EMAIL_USERNAME"))
+    ->setPassword(getenv("EMAIL_PASSWORD"));
+    $mailer = new Swift_Mailer($transport);
+
+    // Test if mailer work
+    if (!$mailer) $status = false;
+  }
 
   // Send email
   if ($status) {
