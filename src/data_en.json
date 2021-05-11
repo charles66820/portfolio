@@ -35,7 +35,7 @@
   "skills": {
     "webTechSrv": "Server-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
     "webTechCli": "Client-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
-    "dbTechAndTools": "Database management and modeling tools and data architecture <span style=\"white-space: nowrap;\">style :</span>",
+    "dbTechAndTools": "Database management & modeling tools and data architecture <span style=\"white-space: nowrap;\">style :</span>",
     "appAnSoftDev": "Applications and software <span style=\"white-space: nowrap;\">development :</span>",
     "devEnv": "Development <span style=\"white-space: nowrap;\">environments :</span>",
     "os": "Operating <span style=\"white-space: nowrap;\">system :</span>",
