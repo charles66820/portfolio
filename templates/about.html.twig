@@ -16,10 +16,10 @@
 
 {% block content %}
   <div class="d-flex flex-column">
-    <h1 id="aboutMe" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;">{{ data.menu.about }}</h1>
+    <h1 id="aboutMe" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;z-index:-1">{{ data.menu.about }}</h1>
     {{ data.about.content|raw }}
 
-    <h1 id="skills" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;">{{ data.menu.skills }}</h1>
+    <h1 id="skills" style="margin-top: calc(-76px + 1.5rem);padding-top: 76px;z-index:-1">{{ data.menu.skills }}</h1>
     <div class="row">
       <div class="col-md-5 mr-md-auto my-4">
         <h4 class="col-12 text-center">{{ data.skills.webTechSrv|raw }}</h4>

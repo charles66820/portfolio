@@ -19,6 +19,9 @@
   --surface-300: rgba(245, 245, 245, 1);
   --surface-400: rgba(237, 237, 237, 1);
 
+  --scroll-color: rgba(200, 200, 200, 1);
+  --scroll-color-hover: rgba(160, 160, 160, 1);
+
   --shadow-sm: rgba(0, 0, 0, 0.075);
   --shadow: rgba(0, 0, 0, 0.15);
   --shadow-lg: rgba(0, 0, 0, 0.175)
