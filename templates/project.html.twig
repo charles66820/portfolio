@@ -23,26 +23,26 @@
   <h3>{{ data.project.docsTitle }}</h3>
 
   {% if projet.docU %}
-    <p>{{ data.project.userDocTitle }}<a href="{{ projet.docU.url }}" target="_blank">{{ projet.docU.name }}</a></p>
+    <p>{{ data.project.userDocTitle }}<a href="{{ projet.docU.url }}" target="_blank" rel="ugc">{{ projet.docU.name }}</a></p>
   {% endif %}
 
   {% if projet.docT %}
-    <p>{{ data.project.techDocTitle }}<a href="{{ projet.docT.url }}" target="_blank">{{ projet.docT.name }}</a></p>
+    <p>{{ data.project.techDocTitle }}<a href="{{ projet.docT.url }}" target="_blank" rel="ugc">{{ projet.docT.name }}</a></p>
   {% endif %}
 
   {% if projet.code %}
-    <p>{{ data.project.sourceCodeTitle }}<a href="{{ projet.code.url }}" target="_blank">{{ projet.code.name }}</a></p>
+    <p>{{ data.project.sourceCodeTitle }}<a href="{{ projet.code.url }}" target="_blank" rel="ugc">{{ projet.code.name }}</a></p>
   {% endif %}
 
   {% if projet.git %}
-    <p>{{ data.project.gitLinkTitle }}<a href="{{ projet.git.url }}" target="_blank">{{ projet.git.name }}</a></p>
+    <p>{{ data.project.gitLinkTitle }}<a href="{{ projet.git.url }}" target="_blank" rel="ugc">{{ projet.git.name }}</a></p>
   {% endif %}
 
   {% if projet.build %}
-    <p>{{ projet.build.lbl }} : <a href="{{ projet.build.url }}" target="_blank">{{ projet.build.name }}</a></p>
+    <p>{{ projet.build.lbl }} : <a href="{{ projet.build.url }}" target="_blank" rel="ugc">{{ projet.build.name }}</a></p>
   {% endif %}
 
   {% if projet.driveFolder %}
-    <p>{{ data.project.driveFolderTitle }}<a href="{{ projet.driveFolder.url }}" target="_blank">{{ projet.driveFolder.name }}</a></p>
+    <p>{{ data.project.driveFolderTitle }}<a href="{{ projet.driveFolder.url }}" target="_blank" rel="ugc">{{ projet.driveFolder.name }}</a></p>
   {% endif %}
 {% endblock %}

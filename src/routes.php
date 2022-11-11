@@ -91,7 +91,7 @@ $app->post("/contact/email", function (Request $req, Response $res) {
     $message = (new Swift_Message("⁡"))
       ->setFrom([$email => $name])
       ->setSubject($subject)
-      ->setTo(["charles@magicorp.fr" => "charles form cgoedefroit.com"])
+      ->setTo(["charles@magicorp.fr" => "charles contact form cgoedefroit.com"])
       ->setBody($message);
 
     // Send the message

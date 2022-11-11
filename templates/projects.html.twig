@@ -53,7 +53,7 @@
         <div class="card-header bg-transparent" style="height: 4rem">
           <p>{{ project.title }}<span> | </span>{{ project.type }}</p>
         </div>
-        <a href="{{ project.goTo.previewUrl }}" class="text-reset">
+        <a href="{{ project.goTo.previewUrl }}" class="text-reset" rel="nofollow">
           <div class="card-body position-relative hpi" style="height: 12rem">
             <img src="{{ project.imgs[0].src }}" class="card-img-top" style="max-height: 12rem; max-width: 100%; width:auto" alt="Project preview">
             <div class="position-absolute fixed-top h-100 w-100 ohpi">
@@ -69,11 +69,11 @@
         </a>
         <div class="card-footer bg-transparent d-flex justify-content-between">
           {% if project.goTo %}
-            <a href="{{ project.goTo.url }}" class="btn btn-link">{{ project.goTo.name }}</a>
+            <a href="{{ project.goTo.url }}" class="btn btn-link" rel="ugc">{{ project.goTo.name }}</a>
           {% else %}
-            <a></a>
+            <a rel="nofollow"></a>
           {% endif %}
-          <a href="{{ project.git.url }}">
+          <a href="{{ project.git.url }}" rel="nofollow">
             <span style="font-size:2em;color:var(--body-300)">
               <i class="fab fa-github" alt="Github" title="{{ project.git.name }}"></i>
             </span>
