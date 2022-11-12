@@ -3,7 +3,7 @@
   "darkMode": "Dark theme",
   "title": "Portfolio",
   "loadingMsg": "Loading...",
-  "copyright": "© 2019-2021",
+  "copyright": "© 2019-2022",
   "menu": {
     "home": "Home",
     "about": "About me",
@@ -32,16 +32,664 @@
   "about": {
     "content": "<p>I love so much space, video games, technology and sci-fi.</p><p>I have always been fascinated by the world around us. I'm seeking to understand how it works.</p><p>When I was young, I looked into electronics. In particular by making small circuits and by disassembling or modifying toys.</p><p>As soon as I got a computer, I quickly wondered how it works. I explored all the files and all the features of Windows and then discovered the wonderful world of Linux.</p><p>In all of my research, I discovered programming and started to learn JAVA, HTML, PHP and JavaScript on my own. Little by little, I became passionate about it.</p><p>After the baccalaureate. I went on to prepare a BTS SIO (French Superior Technician's Certificate IT Service for Organizations) to find out more. I expanded my knowledge in object programming, I learned how to organize my projects, I discovered languages, protocols and software during my studies and internship periods. I also learned to use very practical tools like MERISE, UML…</p><p>I am currently in the 1st year of a master's degree in computer science at the University of Bordeaux.</p>"
   },
-  "skills": {
-    "webTechSrv": "Server-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
-    "webTechCli": "Client-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
-    "dbTechAndTools": "Database management & modeling tools and data architecture <span style=\"white-space: nowrap;\">style :</span>",
-    "appAnSoftDev": "Applications and software <span style=\"white-space: nowrap;\">development :</span>",
-    "devEnv": "Development <span style=\"white-space: nowrap;\">environments :</span>",
-    "os": "Operating <span style=\"white-space: nowrap;\">system :</span>",
-    "network": "Systems and network <span style=\"white-space: nowrap;\">administration :</span>",
-    "other": "<span style=\"white-space: nowrap;\">Other :</span>"
-  },
+  "skillsRow": [
+    [
+      {
+        "id": "webTechSrv",
+        "class": "col-md-5 mr-md-auto my-4",
+        "title": "Server-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
+        "skills": [
+          {
+            "url": "https://nodejs.org/",
+            "class": "",
+            "iconUrl": "/img/icons/nodejs.svg",
+            "alt": "Nodejs",
+            "title": "Nodejs",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://expressjs.com/",
+            "class": "my-4 darksmallBack",
+            "iconUrl": "/img/icons/express-js.png",
+            "alt": "Express",
+            "title": "Express",
+            "style": "width:64px"
+          },
+          {
+            "url": "https://www.php.net/",
+            "class": "",
+            "iconUrl": "/img/icons/php.png",
+            "alt": "PHP",
+            "title": "PHP",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://symfony.com/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/symfony.png",
+            "alt": "Symfony4 / Symfony3",
+            "title": "Symfony4 / Symfony3",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.slimframework.com/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/slim.png",
+            "alt": "Slim Framework",
+            "title": "Slim Framework",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://twig.symfony.com/",
+            "class": "",
+            "iconUrl": "/img/icons/twig.png",
+            "alt": "Twig",
+            "title": "Twig",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://spring.io/",
+            "class": "",
+            "iconUrl": "/img/icons/spring.png",
+            "alt": "Spring Framework",
+            "title": "Spring Framework",
+            "style": "height:48px"
+          }
+        ]
+      },
+      {
+        "id": "webTechCli",
+        "class": "col-md-5 ml-md-auto my-4",
+        "title": "Client-side web languages and <span style=\"white-space: nowrap;\">technologies :</span>",
+        "skills": [
+          {
+            "url": "https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5",
+            "class": "",
+            "iconUrl": "/img/icons/html5.png",
+            "alt": "HTML5",
+            "title": "HTML5",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.w3.org/TR/2001/WD-css3-roadmap-20010523/",
+            "class": "",
+            "iconUrl": "/img/icons/css3.png",
+            "alt": "CSS3",
+            "title": "CSS3",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://sass-lang.com/",
+            "class": "",
+            "iconUrl": "/img/icons/sass.png",
+            "alt": "Sass",
+            "title": "Sass",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://getbootstrap.com/",
+            "class": "",
+            "iconUrl": "/img/icons/bootstrap.png",
+            "alt": "Bootstrap",
+            "title": "Bootstrap",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://bulma.io/",
+            "class": "",
+            "iconUrl": "/img/icons/bulma.svg",
+            "alt": "Bulma",
+            "title": "Bulma",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://fontawesome.com/",
+            "class": "",
+            "iconUrl": "/img/icons/font-awesome.png",
+            "alt": "Fontawesome",
+            "title": "Fontawesome",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://angular.io/",
+            "class": "",
+            "iconUrl": "/img/icons/angular.png",
+            "alt": "Angular",
+            "title": "Angular",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.typescriptlang.org/",
+            "class": "",
+            "iconUrl": "/img/icons/TypeScript.png",
+            "alt": "TypeScript",
+            "title": "TypeScript",
+            "style": "height:48px"
+          },
+          {
+            "url": "",
+            "class": "",
+            "iconUrl": "/img/icons/JavaScript.svg",
+            "alt": "JavaScript",
+            "title": "JavaScript",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://jquery.com/",
+            "class": "",
+            "iconUrl": "/img/icons/jquery.png",
+            "alt": "jQuery",
+            "title": "jQuery",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://webassembly.org/",
+            "class": "",
+            "iconUrl": "/img/icons/WebAssembly.png",
+            "alt": "WebAssembly",
+            "title": "WebAssembly",
+            "style": "height:48px"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "dbTechAndTools",
+        "class": "col-md-5 mr-md-auto my-4",
+        "title": "Database management & modeling tools and data architecture <span style=\"white-space: nowrap;\">style :</span>",
+        "skills": [
+          {
+            "url": "https://sql.sh/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/sql.png",
+            "alt": "SQL",
+            "title": "SQL",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.mysql.com/",
+            "class": "",
+            "iconUrl": "/img/icons/mysql.png",
+            "alt": "MySQL",
+            "title": "MySQL",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.postgresql.org/",
+            "class": "",
+            "iconUrl": "/img/icons/PostgreSQL.png",
+            "alt": "PostgreSQL",
+            "title": "PostgreSQL",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://mongodb.com/",
+            "class": "",
+            "iconUrl": "/img/icons/mongodb.png",
+            "alt": "Mongodb",
+            "title": "Mongodb",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://restfulapi.net/",
+            "class": "darksmallBack",
+            "iconUrl": "/img/icons/restful.png",
+            "alt": "API Rest",
+            "title": "API Rest",
+            "style": "width:48px"
+          }
+        ]
+      },
+      {
+        "id": "appAnSoftDev",
+        "class": "col-md-5 ml-md-auto my-4",
+        "title": "Applications and software <span style=\"white-space: nowrap;\">development :</span>",
+        "skills": [
+          {
+            "url": "https://docs.oracle.com/java/",
+            "class": "",
+            "iconUrl": "/img/icons/java.png",
+            "alt": "java",
+            "title": "java",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://docs.microsoft.com/dotnet/csharp/",
+            "class": "",
+            "iconUrl": "/img/icons/csharp.png",
+            "alt": "C#",
+            "title": "C#",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+            "class": "",
+            "iconUrl": "/img/icons/c.png",
+            "alt": "C",
+            "title": "C",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://wikipedia.org/wiki/C%2B%2B",
+            "class": "",
+            "iconUrl": "/img/icons/c++.svg",
+            "alt": "C++",
+            "title": "C++",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.lua.org/",
+            "class": "",
+            "iconUrl": "/img/icons/lua.png",
+            "alt": "lua",
+            "title": "lua",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.python.org/",
+            "class": "",
+            "iconUrl": "/img/icons/python.png",
+            "alt": "Python",
+            "title": "Python",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://developer.android.com/",
+            "class": "",
+            "iconUrl": "/img/icons/androidSDK.png",
+            "alt": "Android SDK",
+            "title": "Android SDK",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://dotnet.microsoft.com/",
+            "class": "",
+            "iconUrl": "/img/icons/dotnet.png",
+            "alt": "dotNet",
+            "title": "dotNet",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://docs.microsoft.com/dotnet/desktop/wpf",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/wpf.svg",
+            "alt": "Wpf",
+            "title": "Windows Presentation Foundation",
+            "style": "height:48px"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "devEnv",
+        "class": "col-12 my-4",
+        "title": "Development <span style=\"white-space: nowrap;\">environments :</span>",
+        "skills": [
+          {
+            "url": "https://code.visualstudio.com/",
+            "class": "",
+            "iconUrl": "/img/icons/vscode.png",
+            "alt": "VisualStudio Code",
+            "title": "VisualStudio Code",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://atom.io/",
+            "class": "",
+            "iconUrl": "/img/icons/atom.png",
+            "alt": "Atom",
+            "title": "Atom",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.jetbrains.com/phpstorm/",
+            "class": "",
+            "iconUrl": "/img/icons/phpstorm.png",
+            "alt": "Phpstorm",
+            "title": "Phpstorm",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://developer.android.com/studio",
+            "class": "",
+            "iconUrl": "/img/icons/androidStudio.png",
+            "alt": "AndroidStudio",
+            "title": "AndroidStudio",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/",
+            "class": "",
+            "iconUrl": "/img/icons/VisualStudio.png",
+            "alt": "VisualStudio",
+            "title": "VisualStudio",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.jetbrains.com/idea/",
+            "class": "",
+            "iconUrl": "/img/icons/IntelliJ_IDEA.png",
+            "alt": "IntelliJ IDEA",
+            "title": "IntelliJ IDEA",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://git-scm.com/",
+            "class": "",
+            "iconUrl": "/img/icons/Git.png",
+            "alt": "Git",
+            "title": "Git",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.docker.com/",
+            "class": "",
+            "iconUrl": "/img/icons/Docker.png",
+            "alt": "Docker",
+            "title": "Docker",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://docs.traefik.io/",
+            "class": "",
+            "iconUrl": "/img/icons/traefik.png",
+            "alt": "Traefik",
+            "title": "Traefik",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.vmware.com/",
+            "class": "",
+            "iconUrl": "/img/icons/VMware.png",
+            "alt": "VMware",
+            "title": "VMware",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.chromium.org/",
+            "class": "",
+            "iconUrl": "/img/icons/Chromium.png",
+            "alt": "Chromium",
+            "title": "Chromium",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://workspace.google.com/",
+            "class": "",
+            "iconUrl": "/img/icons/googleWorkspace.png",
+            "alt": "Google workspace",
+            "title": "Google workspace",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.latex-project.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/LaTeX.png",
+            "alt": "LaTeX",
+            "title": "LaTeX",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://github.com/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/github.png",
+            "alt": "Github",
+            "title": "Github",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://about.gitlab.com/",
+            "class": "",
+            "iconUrl": "/img/icons/Gitlab.png",
+            "alt": "Gitlab",
+            "title": "Gitlab",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.npmjs.com/",
+            "class": "",
+            "iconUrl": "/img/icons/npm.png",
+            "alt": "Npm",
+            "title": "Npm",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://gradle.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/gradle.png",
+            "alt": "Gradle",
+            "title": "Gradle",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://maven.apache.org/",
+            "class": "",
+            "iconUrl": "/img/icons/maven.png",
+            "alt": "Maven",
+            "title": "Maven",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://ant.apache.org/",
+            "class": "",
+            "iconUrl": "/img/icons/ant.png",
+            "alt": "Ant",
+            "title": "Ant",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://getcomposer.org/",
+            "class": "",
+            "iconUrl": "/img/icons/Composer.png",
+            "alt": "Composer",
+            "title": "Composer",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.postman.com/",
+            "class": "",
+            "iconUrl": "/img/icons/Postman.png",
+            "alt": "Postman",
+            "title": "Postman",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://trello.com/",
+            "class": "",
+            "iconUrl": "/img/icons/Trello.png",
+            "alt": "Trello",
+            "title": "Trello",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://jrsoftware.org/isinfo.php",
+            "class": "",
+            "iconUrl": "/img/icons/innoSetup.png",
+            "alt": "innoSetup",
+            "title": "innoSetup",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://filezilla-project.org/",
+            "class": "",
+            "iconUrl": "/img/icons/FileZilla.svg",
+            "alt": "FileZilla",
+            "title": "FileZilla",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://cmake.org/",
+            "class": "",
+            "iconUrl": "/img/icons/cmake.png",
+            "alt": "Cmake",
+            "title": "Cmake",
+            "style": "height:48px"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "os",
+        "class": "col-lg-4 my-4",
+        "title": "Operating <span style=\"white-space: nowrap;\">system :</span>",
+        "skills": [
+          {
+            "url": "https://www.linux.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/tux.png",
+            "alt": "Linux",
+            "title": "Linux (Debian, Ubuntu, BSD...)",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.microsoft.com/en-us/windows",
+            "class": "",
+            "iconUrl": "/img/icons/Windows.png",
+            "alt": "Windows",
+            "title": "Windows",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.android.com/",
+            "class": "",
+            "iconUrl": "/img/icons/android.png",
+            "alt": "Android",
+            "title": "Android",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.apple.com/macos/",
+            "class": "",
+            "iconUrl": "/img/icons/macosx.png",
+            "alt": "MacOSX",
+            "title": "MacOSX",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://fuchsia.dev/",
+            "class": "",
+            "iconUrl": "/img/icons/fuchsia.png",
+            "alt": "Fuchsia",
+            "title": "Fuchsia",
+            "style": "height:48px"
+          }
+        ]
+      },
+      {
+        "id": "network",
+        "class": "col-lg-4 mx-md-auto my-4",
+        "title": "Systems and network <span style=\"white-space: nowrap;\">administration :</span>",
+        "skills": [
+          {
+            "url": "",
+            "class": "",
+            "iconUrl": "/img/icons/SSH.png",
+            "alt": "SSH",
+            "title": "SSH",
+            "style": "height:48px"
+          },
+          {
+            "url": "",
+            "class": "",
+            "iconUrl": "/img/icons/network.jpeg",
+            "alt": "Network (ipv4, ipv6, DNS, firewall, routing...)",
+            "title": "Network (ipv4, ipv6, DNS, firewall, routing...)",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.netacad.com/courses/packet-tracer",
+            "class": "",
+            "iconUrl": "/img/icons/ciscoPacketTracer.png",
+            "alt": "Cisco Packet Tracer",
+            "title": "Cisco Packet Tracer",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.apache.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/apache.png",
+            "alt": "Apache",
+            "title": "Apache",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://ubuntu.com/",
+            "class": "",
+            "iconUrl": "/img/icons/ubuntu.png",
+            "alt": "Debian / Ubuntu",
+            "title": "Debian / Ubuntu",
+            "style": "height:48px"
+          }
+        ]
+      },
+      {
+        "id": "other",
+        "class": "col-lg-4 my-4",
+        "title": "<span style=\"white-space: nowrap;\">Other :</span>",
+        "skills": [
+          {
+            "url": "https://wikipedia.org/wiki/Search_engine_optimization",
+            "class": "",
+            "iconUrl": "/img/icons/SEO.png",
+            "alt": "SEO",
+            "title": "SEO",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://json.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/jsonfile.png",
+            "alt": "JSON",
+            "title": "JSON",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.w3.org/XML/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/xmlfile.png",
+            "alt": "XML",
+            "title": "XML",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.w3.org/XML/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/xmlfile.png",
+            "alt": "XML",
+            "title": "XML",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://yaml.org/",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/yamlfile.png",
+            "alt": "Yaml / Yml",
+            "title": "Yaml / Yml",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.gnu.org/software/bash/",
+            "class": "darksmallBack",
+            "iconUrl": "/img/icons/bash.png",
+            "alt": "bash",
+            "title": "bash",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/powershell/scripting/overview",
+            "class": "",
+            "iconUrl": "/img/icons/powershell.png",
+            "alt": "powershell / batch",
+            "title": "powershell / batch",
+            "style": "height:48px"
+          }
+        ]
+      }
+    ]
+  ],
   "contact": {
     "title": "Contact me",
     "name": "Your name",
