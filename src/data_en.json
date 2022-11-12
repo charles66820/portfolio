@@ -752,6 +752,14 @@
         "title": "Some <span style=\"white-space: nowrap;\">notions :</span>",
         "skills": [
           {
+            "url": "https://unity.com/",
+            "class": "darkSmallBack",
+            "iconUrl": "/img/icons/unity.png",
+            "alt": "Unity",
+            "title": "Unity",
+            "style": "height:48px"
+          },
+          {
             "url": "https://www.paraview.org/",
             "class": "",
             "iconUrl": "/img/icons/paraview.png",
