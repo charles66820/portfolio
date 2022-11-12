@@ -1,4 +1,8 @@
 User-agent: *
 Disallow: /contact
 Disallow: /veilletechnologique
-Disallow: /project/magicorp
+Allow: /projects/$
+Disallow: /projects/
+Disallow: /dl/
+
+Sitemap: https://cgoedefroit.com/sitemap.xml

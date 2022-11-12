@@ -105,7 +105,7 @@ $app->post("/contact/email", function (Request $req, Response $res) {
   ]);
 });
 
-$app->get("/project/{name}", function (Request $req, Response $res, array $args) {
+$app->get("/projects/{name}", function (Request $req, Response $res, array $args) {
   $index = array_search($args["name"], array_column($req->local["data"]->projects, "name"));
   if ($index === false)
     return $this->view->render($res, "error.html.twig", [

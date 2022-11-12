@@ -889,7 +889,7 @@
       ],
       "goTo": {
         "previewUrl": "https://ppe.magicorp.fr/",
-        "url": "/project/PPE1",
+        "url": "/projects/PPE1",
         "name": "See the project"
       },
       "git": {
@@ -931,7 +931,7 @@
       ],
       "goTo": {
         "previewUrl": "https://ppe2.magicorp.fr/",
-        "url": "/project/PPE2",
+        "url": "/projects/PPE2",
         "name": "See the project"
       },
       "git": {
@@ -970,7 +970,7 @@
       ],
       "goTo": {
         "previewUrl": "https://ppe3.magicorp.fr/",
-        "url": "/project/OTako",
+        "url": "/projects/OTako",
         "name": "See the project"
       },
       "docU": {
@@ -1020,8 +1020,8 @@
         }
       ],
       "goTo": {
-        "previewUrl": "/project/OTactile",
-        "url": "/project/OTactile",
+        "previewUrl": "/projects/OTactile",
+        "url": "/projects/OTactile",
         "name": "See the project"
       },
       "docU": {
@@ -1069,8 +1069,8 @@
         }
       ],
       "goTo": {
-        "previewUrl": "/project/stoko",
-        "url": "/project/stoko",
+        "previewUrl": "/projects/stoko",
+        "url": "/projects/stoko",
         "name": "See the project"
       },
       "git": {
@@ -1100,7 +1100,7 @@
       ],
       "goTo": {
         "previewUrl": "https://www.magicorp.fr/",
-        "url": "/project/magicorp",
+        "url": "/projects/magicorp",
         "name": "See the project"
       },
       "git": {
@@ -1137,7 +1137,7 @@
       ],
       "goTo": {
         "previewUrl": "https://batrenis.magicorp.fr/",
-        "url": "/project/batrenis",
+        "url": "/projects/batrenis",
         "name": "See the project"
       },
       "git": {
@@ -1171,7 +1171,7 @@
       ],
       "goTo": {
         "previewUrl": "https://cgoedefroit.com/",
-        "url": "/project/portfolio",
+        "url": "/projects/portfolio",
         "name": "See the project"
       },
       "git": {
