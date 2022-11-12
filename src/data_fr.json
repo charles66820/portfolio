@@ -167,7 +167,7 @@
             "style": "height:48px"
           },
           {
-            "url": "",
+            "url": "http://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
             "class": "",
             "iconUrl": "/img/icons/JavaScript.svg",
             "alt": "JavaScript",
@@ -584,7 +584,7 @@
         "title": "Administration systèmes et <span style=\"white-space: nowrap;\">réseau :</span>",
         "skills": [
           {
-            "url": "",
+            "url": "https://www.openssh.com/",
             "class": "",
             "iconUrl": "/img/icons/SSH.png",
             "alt": "SSH",
@@ -592,11 +592,11 @@
             "style": "height:48px"
           },
           {
-            "url": "",
+            "url": "https://fr.wikipedia.org/wiki/R%C3%A9seau_informatique",
             "class": "",
             "iconUrl": "/img/icons/network.jpeg",
-            "alt": "Network (ipv4, ipv6, DNS, firewall, routing...)",
-            "title": "Network (ipv4, ipv6, DNS, firewall, routing...)",
+            "alt": "Réseau (ipv4, ipv6, DNS, pare-feu, routage...)",
+            "title": "Réseau (ipv4, ipv6, DNS, pare-feu, routage...)",
             "style": "height:48px"
           },
           {
