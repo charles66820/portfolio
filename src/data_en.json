@@ -237,14 +237,6 @@
             "alt": "dotNet",
             "title": "dotNet",
             "style": "height:48px"
-          },
-          {
-            "url": "https://docs.microsoft.com/dotnet/desktop/wpf",
-            "class": "darkBack",
-            "iconUrl": "/img/icons/wpf.svg",
-            "alt": "Wpf",
-            "title": "Windows Presentation Foundation",
-            "style": "height:48px"
           }
         ]
       }
@@ -832,11 +824,11 @@
             "style": "height:48px"
           },
           {
-            "url": "https://filezilla-project.org/",
-            "class": "",
-            "iconUrl": "/img/icons/FileZilla.svg",
-            "alt": "FileZilla",
-            "title": "FileZilla",
+            "url": "https://docs.microsoft.com/dotnet/desktop/wpf",
+            "class": "darkBack",
+            "iconUrl": "/img/icons/wpf.svg",
+            "alt": "Wpf",
+            "title": "Windows Presentation Foundation",
             "style": "height:48px"
           }
         ]
