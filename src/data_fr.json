@@ -4,6 +4,11 @@
   "title": "Portfolio",
   "loadingMsg": "Chargement...",
   "copyright": "© 2019-2022",
+  "meta": {
+    "lang": "fr-FR",
+    "title": "Charles GOEDEFROIT",
+    "description": "Développeur informatique en calcul haut performance, web et Android."
+  },
   "menu": {
     "home": "Accueil",
     "about": "À propos de moi",

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html class="h-100">
+<html lang="{{ data.meta.lang }}" class="h-100">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/img/icons/tux.png" />
 
-    <meta property="title" content="Charles GOEDEFROIT" />
-    <meta property="description" content="IT Developer in HPC, Web, Android." />
+    <meta name="title" content="{{ data.meta.title }}" />
+    <meta name="description" content="{{ data.meta.description }}" />
+    <meta http-equiv="content-language" content="{{ data.meta.lang }}">
 
     <title>{% if title %}{{ title }}{% else %}{{ data.titles.default }}{% endif %}</title>
 

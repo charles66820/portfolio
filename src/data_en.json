@@ -4,6 +4,11 @@
   "title": "Portfolio",
   "loadingMsg": "Loading...",
   "copyright": "© 2019-2022",
+  "meta": {
+    "lang": "en",
+    "title": "Charles GOEDEFROIT",
+    "description": "IT Developer in HPC, Web, Android."
+  },
   "menu": {
     "home": "Home",
     "about": "About me",
