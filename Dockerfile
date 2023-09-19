@@ -3,14 +3,16 @@ FROM php:7.2-apache
 
 ARG WEB_USER=www-data
 ARG WEB_PRJ_DIR=/var/www/prj/
+ARG SERVER_NAME=www.example.com
+ARG SERVER_ADMIN=webmaster@localhost
 
 RUN apt-get update
 RUN apt-get install -y git zip
 
 # Configure apache2
-RUN sed -ri -e 's!/var/www/html!/var/www/prj/public\n\n<Directory /var/www/prj/public>\nAllowOverride All\nOrder Allow,Deny\nAllow from All\n</Directory>!g' /etc/apache2/sites-available/000-default.conf
-RUN sed -ri -e 's!#ServerName www.example.com!ServerName www.example.com!g' /etc/apache2/sites-available/000-default.conf
-RUN sed -ri -e 's!ServerAdmin webmaster@localhost!ServerAdmin support@magicorp.fr!g' /etc/apache2/sites-available/000-default.conf
+RUN sed -ri -e "s!/var/www/html!${WEB_PRJ_DIR}public\n\n<Directory ${WEB_PRJ_DIR}public>\nAllowOverride All\nOrder Allow,Deny\nAllow from All\n</Directory>!g" /etc/apache2/sites-available/000-default.conf
+RUN sed -ri -e "s!#ServerName www.example.com!ServerName $SERVER_NAME!g" /etc/apache2/sites-available/000-default.conf
+RUN sed -ri -e "s!ServerAdmin webmaster@localhost!ServerAdmin $SERVER_ADMIN!g" /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
 

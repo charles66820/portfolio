@@ -10,5 +10,8 @@ services:
     #restart: always
     build:
       context: .
+      args:
+        - SERVER_NAME=www.cgoedefroit.com
+        - SERVER_ADMIN=support@magicorp.fr
     environment:
       docker: "true"
