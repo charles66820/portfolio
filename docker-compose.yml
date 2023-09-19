@@ -15,3 +15,18 @@ services:
         - SERVER_ADMIN=support@magicorp.fr
     environment:
       docker: "true"
+    labels:
+      - "traefik.http.routers.portfolio.rule=Host(`cgoedefroit.com`) || Host(`www.cgoedefroit.com`)"
+      - traefik.http.routers.portfolio.middlewares=https-redirectscheme
+      - "traefik.http.routers.portfolio-secure.rule=Host(`cgoedefroit.com`) || Host(`www.cgoedefroit.com`)"
+      - traefik.http.routers.portfolio-secure.tls=true
+      - traefik.http.routers.portfolio-secure.tls.certresolver=sslresolver
+      - traefik.http.routers.portfolio-secure.tls.domains[0].main=cgoedefroit.com
+      - traefik.http.routers.portfolio-secure.tls.domains[0].sans=www.cgoedefroit.com
+    networks:
+      - backend
+
+networks:
+  backend:
+    external:
+      name: backend
