@@ -1,20 +1,14 @@
 version: '2'
 
 volumes:
-    logs:
-        driver: local
+  logs:
+    driver: local
 
 services:
-    portfolio:
-        container_name: portfolio
-        #restart: always
-        image: php:7-alpine
-        working_dir: /var/www
-        command: "/bin/sh -c \"php composer.phar install && php composer.phar start\""
-        environment:
-            docker: "true"
-        ports:
-            - 8080:8080
-        volumes:
-            - .:/var/www
-            - logs:/var/www/logs
+  portfolio:
+    container_name: portfolio
+    #restart: always
+    build:
+      context: .
+    environment:
+      docker: "true"

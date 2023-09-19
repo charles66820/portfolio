@@ -21,3 +21,9 @@ For run test :
 ```bash
 php composer.phar test
 ```
+
+Composer over docker:
+
+```bash
+docker run --rm -it -v $PWD:/app composer:1.4
+```
