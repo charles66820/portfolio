@@ -42,7 +42,7 @@
       {
         "id": "HPC",
         "class": "col-lg-6 col-md-5 mr-md-auto my-4",
-        "title": "High-performance <span style=\"white-space: nowrap;\">computing :</span>",
+        "title": "High-performance <span style=\"white-space: nowrap;\">computing & system :</span>",
         "skills": [
           {
             "url": "https://www.open-mpi.org/",
@@ -62,7 +62,7 @@
           },
           {
             "url": "https://www.khronos.org/opencl/",
-            "class": "darkSmallBack",
+            "class": "darkSmallBack lightSmallBack",
             "iconUrl": "/img/icons/opencl.svg",
             "alt": "OpenCL",
             "title": "OpenCL",
@@ -74,6 +74,14 @@
             "iconUrl": "/img/icons/cuda.png",
             "alt": "CUDA",
             "title": "CUDA",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.raspberrypi.org/",
+            "class": "",
+            "iconUrl": "/img/icons/raspberrypi.png",
+            "alt": "Raspberrypi",
+            "title": "Raspberrypi",
             "style": "height:48px"
           }
         ]
@@ -188,14 +196,6 @@
             "style": "height:48px"
           },
           {
-            "url": "https://docs.microsoft.com/dotnet/csharp/",
-            "class": "",
-            "iconUrl": "/img/icons/csharp.png",
-            "alt": "C#",
-            "title": "C#",
-            "style": "height:48px"
-          },
-          {
             "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
             "class": "",
             "iconUrl": "/img/icons/c.png",
@@ -228,19 +228,27 @@
             "style": "height:48px"
           },
           {
+            "url": "https://dart.dev/",
+            "class": "",
+            "iconUrl": "/img/icons/dart.svg",
+            "alt": "Dart",
+            "title": "Dart",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://flutter.dev/",
+            "class": "",
+            "iconUrl": "/img/icons/flutter.png",
+            "alt": "Flutter",
+            "title": "Flutter",
+            "style": "height:48px"
+          },
+          {
             "url": "https://developer.android.com/",
             "class": "",
             "iconUrl": "/img/icons/androidSDK.png",
             "alt": "Android SDK",
             "title": "Android SDK",
-            "style": "height:48px"
-          },
-          {
-            "url": "https://dotnet.microsoft.com/",
-            "class": "",
-            "iconUrl": "/img/icons/dotnet.png",
-            "alt": "dotNet",
-            "title": "dotNet",
             "style": "height:48px"
           }
         ]
@@ -370,14 +378,6 @@
             "iconUrl": "/img/icons/maven.png",
             "alt": "Maven",
             "title": "Maven",
-            "style": "height:48px"
-          },
-          {
-            "url": "https://ant.apache.org/",
-            "class": "",
-            "iconUrl": "/img/icons/ant.png",
-            "alt": "Ant",
-            "title": "Ant",
             "style": "height:48px"
           },
           {
@@ -571,14 +571,6 @@
             "alt": "jQuery",
             "title": "jQuery",
             "style": "height:48px"
-          },
-          {
-            "url": "https://webassembly.org/",
-            "class": "",
-            "iconUrl": "/img/icons/WebAssembly.png",
-            "alt": "WebAssembly",
-            "title": "WebAssembly",
-            "style": "height:48px"
           }
         ]
       }
@@ -653,14 +645,6 @@
             "style": "height:48px"
           },
           {
-            "url": "https://www.netacad.com/courses/packet-tracer",
-            "class": "",
-            "iconUrl": "/img/icons/ciscoPacketTracer.png",
-            "alt": "Cisco Packet Tracer",
-            "title": "Cisco Packet Tracer",
-            "style": "height:48px"
-          },
-          {
             "url": "https://www.apache.org/",
             "class": "darkBack",
             "iconUrl": "/img/icons/apache.png",
@@ -724,19 +708,19 @@
             "style": "height:48px"
           },
           {
-            "url": "https://wikipedia.org/wiki/Search_engine_optimization",
-            "class": "",
-            "iconUrl": "/img/icons/SEO.png",
-            "alt": "SEO",
-            "title": "SEO",
-            "style": "height:48px"
-          },
-          {
             "url": "https://docs.microsoft.com/en-us/powershell/scripting/overview",
             "class": "",
             "iconUrl": "/img/icons/powershell.png",
             "alt": "powershell / batch",
             "title": "powershell / batch",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://wikipedia.org/wiki/Search_engine_optimization",
+            "class": "",
+            "iconUrl": "/img/icons/SEO.png",
+            "alt": "SEO",
+            "title": "SEO",
             "style": "height:48px"
           }
         ]
@@ -765,19 +749,43 @@
             "style": "height:48px"
           },
           {
-            "url": "https://www.raspberrypi.org/",
-            "class": "",
-            "iconUrl": "/img/icons/raspberrypi.png",
-            "alt": "Raspberrypi",
-            "title": "Raspberrypi",
-            "style": "height:48px"
-          },
-          {
             "url": "https://www.arduino.cc/",
             "class": "",
             "iconUrl": "/img/icons/arduino.png",
             "alt": "Arduino",
             "title": "Arduino",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://docs.microsoft.com/dotnet/csharp/",
+            "class": "",
+            "iconUrl": "/img/icons/csharp.png",
+            "alt": "C#",
+            "title": "C#",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://dotnet.microsoft.com/",
+            "class": "",
+            "iconUrl": "/img/icons/dotnet.png",
+            "alt": "dotNet",
+            "title": "dotNet",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://ant.apache.org/",
+            "class": "",
+            "iconUrl": "/img/icons/ant.png",
+            "alt": "Ant",
+            "title": "Ant",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://webassembly.org/",
+            "class": "",
+            "iconUrl": "/img/icons/WebAssembly.png",
+            "alt": "WebAssembly",
+            "title": "WebAssembly",
             "style": "height:48px"
           },
           {
@@ -834,6 +842,22 @@
             "iconUrl": "/img/icons/wpf.svg",
             "alt": "Wpf",
             "title": "Windows Presentation Foundation",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.opengl.org/",
+            "class": "",
+            "iconUrl": "/img/icons/opengl_logo.png",
+            "alt": "OpenGL",
+            "title": "OpenGL",
+            "style": "height:48px"
+          },
+          {
+            "url": "https://www.netacad.com/courses/packet-tracer",
+            "class": "",
+            "iconUrl": "/img/icons/ciscoPacketTracer.png",
+            "alt": "Cisco Packet Tracer",
+            "title": "Cisco Packet Tracer",
             "style": "height:48px"
           }
         ]
