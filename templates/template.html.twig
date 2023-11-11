@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/img/icons/tux.png" />
 
-    <meta name="title" content="{{ data.meta.title }}" />
-    <meta name="description" content="{{ data.meta.description }}" />
-    <meta http-equiv="content-language" content="{{ data.meta.lang }}">
+    <meta name="title" property="title" content="{{ data.meta.title }}" />
+    <meta name="description" property="description" content="{{ data.meta.description }}" />
+    <!--<meta http-equiv="content-language" content="{{ data.meta.lang }}">-->
 
     <title>{% if title %}{{ title }}{% else %}{{ data.titles.default }}{% endif %}</title>
 
