@@ -15,6 +15,7 @@ RUN sed -ri -e "s!#ServerName www.example.com!ServerName $SERVER_NAME!g" /etc/ap
 RUN sed -ri -e "s!ServerAdmin webmaster@localhost!ServerAdmin $SERVER_ADMIN!g" /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
+RUN a2enmod headers
 
 # Install Composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
