@@ -26,5 +26,5 @@ $app->add(function ($req, $res, $next) use ($local, $langs) {
 
   $req = $req->withAttribute('accept-language', $lang);
   $req->local["data"] = $local[$lang];
-	return $next($req, $res);
+  return $next($req, $res);
 });

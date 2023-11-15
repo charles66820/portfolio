@@ -9,6 +9,8 @@
     <meta name="description" property="description" content="{{ data.meta.description }}" />
     <!--<meta http-equiv="content-language" content="{{ data.meta.lang }}">-->
 
+    {% block meta %}{% endblock %}
+
     <title>{% if title %}{{ title }}{% else %}{{ data.titles.default }}{% endif %}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

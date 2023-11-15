@@ -1,5 +1,9 @@
 {% extends 'template.html.twig' %}
 
+{% block meta %}
+  <meta name="robots" content="noindex">
+{% endblock %}
+
 {% block content %}
 <section class="mb-4">
   <h1 class="h1-responsive font-weight-bold text-center my-4">{{ data.contact.msg }}</h1>

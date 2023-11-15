@@ -19,3 +19,7 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ index.php [QSA,L]
 </IfModule>
+
+<If "%{REQUEST_URI} =~ m#^/dl/#">
+Header set X-Robots-Tag "noindex"
+</If>
