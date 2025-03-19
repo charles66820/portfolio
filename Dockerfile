@@ -11,7 +11,7 @@ RUN apt-get install -y git zip
 
 # Configure apache2
 RUN sed -ri -e "s!/var/www/html!${WEB_PRJ_DIR}public\n\n	<Directory ${WEB_PRJ_DIR}public>\n		AllowOverride All\n		Order Allow,Deny\n		Allow from All\n	</Directory>!g" /etc/apache2/sites-available/000-default.conf
-RUN sed -ri -e "s!#ServerName www.example.com!ServerName $SERVER_NAME!g" /etc/apache2/sites-available/000-default.conf
+RUN sed -ri -e "s!#ServerName www.example.com!UseCanonicalName On\n	ServerName $SERVER_NAME!g" /etc/apache2/sites-available/000-default.conf
 RUN sed -ri -e "s!ServerAdmin webmaster@localhost!ServerAdmin $SERVER_ADMIN!g" /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite

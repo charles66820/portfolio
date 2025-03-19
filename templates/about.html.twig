@@ -1,5 +1,9 @@
 {% extends 'template.html.twig' %}
 
+{% block meta %}
+  <link rel="canonical" href="https://{{ domain }}/about" />
+{% endblock %}
+
 {% block stylesheet %}
   <style>
     body {

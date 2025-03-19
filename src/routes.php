@@ -8,6 +8,7 @@ use Slim\Http\StatusCode;
 $app->get("/", function (Request $req, Response $res) {
   return $this->view->render($res, "home.html.twig", [
     "title" => $req->local["data"]->titles->home,
+    "domain" => $req->local["domain"],
     "data" => $req->local["data"]
   ]);
 });
@@ -15,6 +16,7 @@ $app->get("/", function (Request $req, Response $res) {
 $app->get("/about", function (Request $req, Response $res) {
   return $this->view->render($res, "about.html.twig", [
     "title" => $req->local["data"]->titles->about,
+    "domain" => $req->local["domain"],
     "data" => $req->local["data"]
   ]);
 });
@@ -22,6 +24,7 @@ $app->get("/about", function (Request $req, Response $res) {
 $app->get("/projects", function (Request $req, Response $res) {
   return $this->view->render($res, "projects.html.twig", [
     "title" => $req->local["data"]->titles->projects,
+    "domain" => $req->local["domain"],
     "data" => $req->local["data"]
   ]);
 });

@@ -3,6 +3,8 @@
 
 // e.g: $app->add(new \Slim\Csrf\Guard);
 
+$domain = "{$_SERVER['SERVER_NAME']}";
+
 $langs = [ 'fr', 'en' ];
 $local = [
   "en" => json_decode(file_get_contents(__DIR__ . '/data_en.json')),
@@ -10,7 +12,7 @@ $local = [
 ];
 
 // Language selection
-$app->add(function ($req, $res, $next) use ($local, $langs) {
+$app->add(function ($req, $res, $next) use ($domain, $local, $langs) {
 
   // If lang cookie is set
   if (isset($_COOKIE["lang"])) $lang = $_COOKIE["lang"];
@@ -26,5 +28,8 @@ $app->add(function ($req, $res, $next) use ($local, $langs) {
 
   $req = $req->withAttribute('accept-language', $lang);
   $req->local["data"] = $local[$lang];
+
+  $req->local["domain"] = $domain;
+
   return $next($req, $res);
 });

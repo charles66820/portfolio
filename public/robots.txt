@@ -5,4 +5,4 @@ Allow: /projects/$
 Disallow: /projects/
 Disallow: /dl/
 
-Sitemap: https://cgoedefroit.com/sitemap.xml
+Sitemap: https://www.cgoedefroit.com/sitemap.xml
