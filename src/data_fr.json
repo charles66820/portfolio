@@ -1199,7 +1199,7 @@
         }
       ],
       "goTo": {
-        "previewUrl": "https://cgoedefroit.com/",
+        "previewUrl": "https://www.cgoedefroit.com/",
         "url": "/projects/portfolio",
         "name": "Voir le projet"
       },
@@ -1209,7 +1209,7 @@
       },
       "build": {
         "lbl": "Accéder au site",
-        "url": "https://cgoedefroit.com/",
+        "url": "https://www.cgoedefroit.com/",
         "name": "Portfolio"
       }
     }
