@@ -7,7 +7,12 @@
 
     <meta name="title" property="title" content="{{ data.meta.title }}" />
     <meta name="description" property="description" content="{{ data.meta.description }}" />
+    {# <meta name="keywords" content="goedefroit, charles, dev, VR, XR, PhD student, HPC, UINTR"/> #}
     <!--<meta http-equiv="content-language" content="{{ data.meta.lang }}">-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ data.meta.title }}"/>
+    <meta property="og:description" content="{{ data.meta.description }}"/>
+    <meta property="og:site_name" content="Charles GOEDEFROIT"/>
 
     {% block meta %}{% endblock %}
 

@@ -1,7 +1,9 @@
 {% extends 'template.html.twig' %}
 
 {% block meta %}
-  <link rel="canonical" href="https://{{ domain }}" />
+  <meta property="og:url" content="https://{{ domain }}"/>
+
+  <link rel="canonical" href="https://{{ domain }}" id="canonical" />
 {% endblock %}
 
 {% block stylesheet %}
